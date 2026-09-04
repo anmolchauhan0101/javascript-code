@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selectors</title>
+</head>
+<body>
+    <nav class="block">
+        <p class="paragraph"> welcome to my website</p>
+    </nav>
+    <div class="block">
+        <h4>hey , my name is <span id="name">Anmol chauhan</span></h4>
+        <p class="paragraph">This is my website</p>
+
+        <pre> <code>console.log("Hello, World!");</code> </pre>
+    </div>
+
+    <script>
+        //query selector
+
+        /*
+        selectors
+        - tag name
+        -id using #
+        -class name using .
+        -attribute using []
+        */
+
+        // 1st querySelector method is used to select the first element that matches a specified CSS selector(s) in the document.
+
+
+        const body = document.querySelector("body");
+        console.log(body.innerHTML);
+
+        //we can chnage or manipulate the content of the selected element using innerHTML property.
+        // const div = document.querySelector("div");
+        // div.innerHTML = "<h1>Hacked</h1>";
+
+
+
+        
+
+    </script>
+</body>
+</html>
