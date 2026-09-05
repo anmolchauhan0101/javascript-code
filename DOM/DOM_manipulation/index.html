@@ -7,17 +7,19 @@
 </head>
 <body>
     <nav class="block">
-        <p class="paragraph"> welcome to my website</p>
+        <p class="paragraph1"> welcome to my website</p>
     </nav>
     <div class="block">
         <h4>hey , my name is <span id="name">Anmol chauhan</span></h4>
         <p class="paragraph">This is my website</p>
 
-        <pre> <code>console.log("Hello, World!");</code> </pre>
+        <pre> <code>console.log("Hello world");</code> </pre>
     </div>
 
     <script>
         //query selector
+
+
 
         /*
         selectors
@@ -29,18 +31,53 @@
 
         // 1st querySelector method is used to select the first element that matches a specified CSS selector(s) in the document.
 
-
+        //query selector pick the 1st occurence in the document if multiple elements match and return it as an object
+        //example there are more than one element with class name "block" in the document but querySelector method will return only the first occurence of it.
+        
         const body = document.querySelector("body");
         console.log(body.innerHTML);
+        //In above example we have selected the body element using querySelector method and then we have used innerHTML property to get the content of the body element.
 
         //we can chnage or manipulate the content of the selected element using innerHTML property.
         // const div = document.querySelector("div");
         // div.innerHTML = "<h1>Hacked</h1>";
 
+        const code = document.querySelector("code");
+        alert(code.innerHTML);
+        //In above example we have selected the code element using querySelector method and then we have used innerHTML property to get the content of the code element and then we have used alert method to show the content in a pop-up message.
 
+        const username = document.querySelector("#name");
+        username.innerHTML = "Anmol";
 
+    //In above example we have selected the span element with id "name" using querySelector method and then we have used innerHTML property to change the content of the span element.
+
+        const ele = document.querySelector(".paragraph");
+        ele.innerHTML = "This is my new website";
+
+        //In above example we have selected the p element with class "paragraph" using querySelector method and then we have used innerHTML property to change the content of the p element.
         
-
     </script>
+
+    <script>
+        //get element by id method is used to select an element by its id attribute value.
+
+        const name = document.getElementById("name");
+        name.innerText = "Anmol Chauhan";
+        name.style.color = "red";
+
+        //In above example we have selected the span element with id "name" using getElementById method and then we have used innerText property to change the content of the span element and then we have used style property to change the color of the text.
+        //similarly we can apply many other styles to the selected element using style property and many other properties like innerHTML, innerText, etc.
+    </script>
+
+    <script>
+        //get elements by class name method is used to select all the elements with a specified class name.
+        const el = document.getElementsByClassName("paragraph");
+        for(let i =0 ; i<el.length; i++){
+            el[i].style.color = "blue";
+        }
+
+        //In above example we have selected all the p elements with class "paragraph" using getElementsByClassName method and then we have used for loop to change the color of the text of all the selected elements.
+    </script>
+
 </body>
 </html>
